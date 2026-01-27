@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Validación de Placas</title>
+
+  <script src="validaciones.js"></script>
+  <script src="placas.js"></script>
+  <script src="serviciosPlacas.js"></script>
+  <script src="utilitariosCadenas.js"></script>
+</head>
+
+<body>
+  <h2>Validar Placa</h2>
+
+  <label>Placa:</label>
+  <input type="text" id="txtPlaca" placeholder="ABC-1234">
+  <br><br>
+
+  <button onclick="validarPlaca()">Validar</button>
+
+  <p id="lblResultado"></p>
+  <p><strong>Provincia:</strong> <span id="lblProvincia"></span></p>
+  <p><strong>Tipo de vehículo:</strong> <span id="lblTipo"></span></p>
+  <p><strong>Día de circulación:</strong> <span id="lblDia"></span></p>
+</body>
+</html>
