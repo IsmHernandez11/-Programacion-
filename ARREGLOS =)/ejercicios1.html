@@ -1,0 +1,52 @@
+!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="ejercicios1.js"></script>
+    <script src="utilitarios.js"></script>
+</head>
+
+<body>
+    <input type="text" id="txtNota" />
+    <input type="button" value="Agrega Nota" onclick="probarAgregar()" />
+    <input type="button" value="Prueba 1" onclick="agregarElementos()" />
+    <input type="button" value="Imprimir" onclick="recorrerArreglo()" />
+    <h3 id="lblPromedio">Promedio: </h3>
+    <input type="button" value="CALCULAR PROMEDIO" onclick="ejecutarPromedio()" />
+    <br>
+    <br>
+    <table>
+        <tr>
+            <th>CABECERA 1</th>
+            <th>CABECERA 2</th>
+            <th>CABECERA 3</th>
+        </tr>
+        <tr>
+            <td>Celda 1</td>
+            <td>Celda 2</td>
+            <td>Celda 3</td>
+        </tr>
+        <tr>
+            <td>Celda 4</td>
+            <td>Celda 5</td>
+            <td>Celda 6</td>
+        </tr>
+        <tr>
+            <td>Celda 7</td>
+            <td>Celda 8</td>
+            <td>Celda 9</td>
+        </tr>
+    </table>
+    
+    <br>
+
+    <input type="button" value="Generar Tabla" onclick="generarTabla()" />
+    <input type="button" value="Mostrar Notas" onclick="mostrarNotas()" />
+    <div id="divTabla"></div>
+    
+</body>
+
+</html>
