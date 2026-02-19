@@ -2,19 +2,23 @@
 <html>
 
 <head>
-
+    <meta charset="UTF-8">
+    <title>Rol de Pagos</title>
+    <link rel="stylesheet" href="roles.css">
+    <script src="utilitarios.js"></script>
+    <script src="roles.js"></script>
 </head>
 
-<body>
+<body onload="mostrarOpcionRol()">
     <div class="menu">
         <div class="contenedorBoton">
-            <input type="button" value="EMPLEADO" class="estiloBoton" />
+            <input type="button" value="EMPLEADO" class="estiloBoton" onclick="mostrarOpcionEmpleado()" />
         </div>
         <div class="contenedorBoton">
-            <input type="button" value="ROL" class="estiloBoton"/>
+            <input type="button" value="ROL" class="estiloBoton" onclick="mostrarOpcionRol()" />
         </div>
         <div class="contenedorBoton">
-            <input type="button" value="RESUMEN" class="estiloBoton" />
+            <input type="button" value="RESUMEN" class="estiloBoton" onclick="mostrarOpcionResumen()" />
         </div>
 
     </div>
@@ -31,7 +35,7 @@
                     </div>
                 </div>
                 <div class="contenedorBoton">
-                    <input type="button" value="BUSCAR" class="estiloBoton" />
+                    <input type="button" value="BUSCAR" class="estiloBoton" onclick="ejecutarBusqueda()" />
                 </div>
             </div>
 
@@ -74,13 +78,13 @@
                 </div>
                 <div class="botones">
                     <div class="contenedorBoton">
-                        <input type="button" value="NUEVO" class="estiloBoton"  />
+                        <input type="button" value="NUEVO" class="estiloBoton" onclick="ejecutarNuevo()" />
                     </div>
                     <div class="contenedorBoton">
-                        <input type="button" value="GUARDAR" class="estiloBoton" id="btnGuardar" />
+                        <input type="button" value="GUARDAR" class="estiloBoton" id="btnGuardar" onclick="guardar()" />
                     </div>
                     <div class="contenedorBoton">
-                        <input type="button" value="LIMPIAR" class="estiloBoton"  />
+                        <input type="button" value="LIMPIAR" class="estiloBoton" onclick="limpiar()" />
                     </div>
                 </div>
                 <div id="tablaEmpleados" class="areaTabla">
@@ -88,7 +92,7 @@
                 </div>
             </div>
             <div class="logoEscuela">
-                <img src="./imagenes/logoKrakeDev.png" width="80%" />
+                <img src="./imagenes/empleado.png" width="80%" />
             </div>
         </div>
     </div>
@@ -105,7 +109,7 @@
                     </div>
                 </div>
                 <div class="contenedorBoton">
-                    <input type="button" value="BUSCAR" class="estiloBoton" />
+                    <input type="button" value="BUSCAR" class="estiloBoton" onclick="buscarPorRol()" />
                 </div>
             </div>
 
@@ -145,7 +149,7 @@
                 </div>
                 <div class="botones">
                     <div class="contenedorBoton">
-                        <input type="button" value="CALCULAR" class="estiloBoton" />
+                        <input type="button" value="CALCULAR" class="estiloBoton" onclick="calcularRol()" />
                     </div>
                 </div>
                 <div class="ingresoDatos">
@@ -166,19 +170,20 @@
                 </div>
                 <div class="botones">
                     <div class="contenedorBoton">
-                        <input type="button" value="GUARDAR" class="estiloBoton" />
+                        <input type="button" id="btnGuardarRol" value="GUARDAR" class="estiloBoton"
+                            onclick="guardarRol()" />
                     </div>
                 </div>
             </div>
             <div class="logoEscuela">
-                <img src="./imagenes/logoKrakeDev.png" width="80%" />
+                <img src="./imagenes/rol.png" width="80%" />
             </div>
         </div>
     </div>
     <div id="divResumen">
         <div class="principal">
             <div class="area">
-              
+
             </div>
             <div class="area">
                 <div id="tablaResumen" class="areaTabla">
@@ -205,12 +210,21 @@
                         APORTE EMPLEADO
                     </div>
                     <div>
-                        <div class="info" id="infoAporteEmpleado">0.0</div>
+                        <div class="info" id="infoAporteEmpleado">0.0
+                        </div>
+                    </div>
+                </div>
+                <div class="ingresoDatos">
+                    <div class="tituloCampo">
+                        TOTAL NÓMINA
+                    </div>
+                    <div>
+                        <div class="info" id="infoTotalNomina">0.0</div>
                     </div>
                 </div>
             </div>
             <div class="logoEscuela">
-                <img src="./imagenes/logoKrakeDev.png" width="80%" />
+                <img src="./imagenes/resumen.png" width="80%" />
             </div>
         </div>
     </div>
