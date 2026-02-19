@@ -3,7 +3,7 @@ let empleados = [
     {cedula:"0914632123",nombre:"Luisa",apellido:"Gonzalez",sueldo:900.0}
 ]
 let roles = [];
-
+//ya esta lista =)
 mostrarEmpleados = function () {
     let divTabla = document.getElementById("tablaEmpleados");
 
