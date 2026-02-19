@@ -211,7 +211,7 @@ limpiar = function () {
 }
 
 
-//----Pagina Rol----
+//buscar rol
 
 buscarPorRol = function () {
 
