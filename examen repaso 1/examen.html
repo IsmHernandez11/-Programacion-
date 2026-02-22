@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Krake Dev - Personas</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body onload="mostrarTabla()">
+
+    <h1>KRAKE DEV - Evaluación Individual</h1>
+
+    <!-- AGREGAR PERSONA -->
+    <section>
+        <h2>Agregar Persona</h2>
+
+        <label>Nombre:</label>
+        <input type="text" id="txtNombre">
+        <div class="error" id="errorNombre"></div>
+
+        <label>Edad:</label>
+        <input type="number" id="txtEdad">
+        <div class="error" id="errorEdad"></div>
+
+        <button onclick="agregarPersona()">GUARDAR</button>
+    </section>
+
+    <!-- TABLA -->
+    <section>
+        <h2>Lista de Personas</h2>
+        <table id="tablaPersonas">
+            <thead>
+                <tr>
+                    <th>EDAD</th>
+                    <th>NOMBRE</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+
+    <!-- BUSCAR MAYOR -->
+    <section>
+        <h2>Buscar Mayor</h2>
+        <button onclick="determinarMayor()">ENCONTRAR MAYOR</button>
+        <p id="resultadoMayor"></p>
+    </section>
+
+    <!-- BUSCAR MENOR -->
+    <section>
+        <h2>Buscar Menor</h2>
+        <button onclick="determinarMenor()">ENCONTRAR MENOR</button>
+        <p id="resultadoMenor"></p>
+    </section>
+
+    <script src="utilitarios.js"></script>
+    <script src="orden.js"></script>
+</body>
+</html>
