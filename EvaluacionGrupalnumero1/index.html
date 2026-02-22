@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <script src="utilitarios.js"></script>
+    <script src="banco.js"></script>
+    <title>Sistema Bancario</title>
+</head>
+<body class="bg">
+
+<div class="container">
+
+    <h1 class="titulo-principal">Sistema Bancario</h1>
+
+    <div class="menu">
+        <button class="btn-menu" onclick="mostrarSeccion('cuentas')">Cuentas</button>
+        <button class="btn-menu" onclick="mostrarSeccion('transacciones')">Transacciones</button>
+        <button class="btn-menu" onclick="mostrarSeccion('movimientos')">Movimientos</button>
+    </div>
+
+    <hr>
+
+<div id="cuentas" class="card">
+
+        <h2>Crear Cuenta</h2>
+
+        <div class="form-grid">
+            <input type="text" id="cedula" placeholder="Cédula">
+            <input type="text" id="nombre" placeholder="Nombre">
+            <input type="text" id="apellido" placeholder="Apellido">
+            <input type="text" id="numeroCuenta" placeholder="Número Cuenta">
+        </div>
+
+        <button onclick="agregarCuenta()">Agregar Cuenta</button>
+
+        <div id="mensajeCuenta" class="mensaje"></div>
+
+        <table id="tablaCuentas"></table>
+
+    </div>
+
+<div id="transacciones" class="card" style="display:none;">
+
+        <h2>Transacciones</h2>
+
+        <input type="text" id="buscarCuenta" placeholder="Número Cuenta">
+        <button onclick="buscarCuenta()">Buscar</button>
+
+        <div id="infoCuenta" class="info-cuenta"></div>
+
+        <input type="number" id="monto" placeholder="Monto">
+
+        <div class="acciones">
+            <button onclick="depositar()" id="btnDepositar" disabled>Depositar</button>
+            <button onclick="retirar()" id="btnRetirar" disabled>Retirar</button>
+        </div>
+
+        <div id="mensaje" class="mensaje"></div>
+
+    </div>
+
+</div>
+
+ <div id="movimientos" class="card" style="display:none;">
+
+        <h2>Movimientos</h2>
+
+        <input type="text" id="verCuenta" placeholder="Número Cuenta">
+        <button onclick="verMovimientos()">Ver Movimientos</button>
+
+        <table id="tablaMovimientos"></table>
+
+    </div>
+
+</div>
+</div>
+</body>
+</html>
