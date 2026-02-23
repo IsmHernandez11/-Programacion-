@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Estudiantes</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<h2>Formulario Estudiante</h2>
+
+<label>ID:</label>
+<input type="text" id="id">
+<div id="errorId" class="error"></div>
+
+<label>Nombre:</label>
+<input type="text" id="nombre">
+<div id="errorNombre" class="error"></div>
+
+<label>Correo:</label>
+<input type="text" id="correo">
+<div id="errorCorreo" class="error"></div>
+
+<button onclick="guardar()">Guardar / Actualizar</button>
+
+<hr>
+
+<h3>Eliminar estudiante por ID</h3>
+
+<input type="text" id="idEliminar" placeholder="Ingrese ID">
+<div id="errorEliminar" class="error"></div>
+<button onclick="eliminar()">Eliminar estudiante</button>
+
+<h2>Lista de Estudiantes</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Correo</th>
+        </tr>
+    </thead>
+    <tbody id="lista"></tbody>
+</table>
+
+<script src="js/script.js"></script>
+</body>
+</html>
